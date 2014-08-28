@@ -22,6 +22,9 @@ app.use(bodyParser.json())
 app.use(require('./routes/todos'));
 
 // start the server
-app.listen(1337, function() {
-   console.log('Adto na ha port 1337'); 
+// access to environmental variables
+var port = process.env.PORT || 1337;
+
+app.listen(port, function() {
+   console.log('Adto na ha port ' + port); 
 });
